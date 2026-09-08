@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Denty's Small Removals & Waste - Reliable local house removals, flat moves, garden clearance and waste disposal across Scunthorpe, Brigg, Doncaster & Gainsborough. Affordable man-and-van service." />
+  <meta name="keywords" content="removals, house removals, flat removals, garden clearance, waste removal, man and van, local removals, Scunthorpe, Brigg, Doncaster, Gainsborough" />
+  <meta name="author" content="Denty's Small Removals & Waste" />
+  <meta name="theme-color" content="#1a4332" />
+  <meta property="og:title" content="Denty's Small Removals & Waste | Reliable Local Clearance" />
+  <meta property="og:description" content="Professional local removals, flat moves, and garden clearance. Affordable pricing from £45. Serving Scunthorpe, Brigg, Doncaster & Gainsborough." />
+  <meta property="og:type" content="business.business" />
+  <meta property="og:url" content="https://denty2006-glitch.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Denty's Small Removals & Waste" />
+  <meta name="twitter:description" content="Professional local removals and garden clearance. Serving the Midlands & North Lincolnshire." />
+  
+  <title>Denty's Small Removals & Waste | Reliable Local Clearance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-cream: #f6f5ee;
+      --card-white: #ffffff;
+      --brand-green: #1a4332;
+      --brand-green-light: #245742;
+      --accent-orange: #e07238;
+      --accent-orange-hover: #c95d25;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+      --border-color: #e5e7eb;
+      --success-green: #10b981;
+      --warning-amber: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Top Banner */
+    header {
+      background-color: var(--brand-green);
+      color: white;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo-container h1 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .logo-container span {
+      display: block;
+      font-size: 0.75rem;
+      color: #9cbcae;
+      letter-spacing: 1px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .header-btn {
+      background-color: var(--accent-orange);
+      color: white;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .header-btn:hover {
+      background-color: var(--accent-orange-hover);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    /* White Service Cards */
+    .service-card {
+      background: var(--card-white);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(0,0,0,0.03);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      gap: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .card-price {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .card-price span {
+      display: block;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .card-link {
+      color: var(--accent-orange);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: gap 0.2s ease;
+    }
+
+    .card-link:hover {
+      gap: 0.5rem;
+    }
+
+    /* Dark Load Sizes Section */
+    .dark-section {
+      background-color: var(--brand-green);
+      color: white;
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+    }
+
+    .dark-section .section-title {
+      color: white;
+    }
+
+    .dark-section .section-subtitle {
+      color: #a3c2b5;
+    }
+
+    .dark-card {
+      background-color: var(--brand-green-light);
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dark-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .dark-card-price {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: #a3c2b5;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .dark-card-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .dark-card-desc {
+      font-size: 0.85rem;
+      color: #d1e0d9;
+    }
+
+    /* Badge for Location */
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-orange);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Testimonials Section */
+    .testimonial-card {
+      background: var(--card-white);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+      border-top: 3px solid var(--accent-orange);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    }
+
+    .stars {
+      color: var(--warning-amber);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--brand-green);
+      font-size: 0.85rem;
+    }
+
+    .testimonial-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact Form Section */
+    .form-section {
+      background-color: var(--card-white);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 3rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 0.75rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent-orange);
+      box-shadow: 0 0 0 3px rgba(224, 114, 56, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+      grid-column: 1 / -1;
+    }
+
+    .form-full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-submit {
+      background-color: var(--accent-orange);
+      color: white;
+      padding: 0.875rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 100%;
+    }
+
+    .form-submit:hover {
+      background-color: var(--accent-orange-hover);
+    }
+
+    .form-submit:active {
+      transform: scale(0.98);
+    }
+
+    .form-success {
+      background-color: #d1fae5;
+      border: 1px solid #6ee7b7;
+      color: #065f46;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    /* Service Area / Coverage */
+    .coverage-section {
+      background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-light) 100%);
+      color: white;
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+    }
+
+    .coverage-section h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .coverage-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .coverage-list li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .coverage-list li:before {
+      content: "✓";
+      font-weight: 800;
+      color: var(--success-green);
+      font-size: 1.1rem;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-light) 100%);
+      color: white;
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .hero-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      font-weight: 800;
+    }
+
+    .hero-banner p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #d1e0d9;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta-btn {
+      padding: 0.875rem 1.75rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 2px solid white;
+      transition: all 0.2s ease;
+    }
+
+    .hero-cta-primary {
+      background-color: var(--accent-orange);
+      color: white;
+      border-color: var(--accent-orange);
+    }
+
+    .hero-cta-primary:hover {
+      background-color: var(--accent-orange-hover);
+      border-color: var(--accent-orange-hover);
+    }
+
+    .hero-cta-secondary {
+      background-color: transparent;
+      color: white;
+    }
+
+    .hero-cta-secondary:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--brand-green);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--accent-orange);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+
+      .header-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .header-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-banner h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-cta-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .form-full-width {
+        grid-column: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo-container">
+      <h1>Denty's</h1>
+      <span>SMALL REMOVALS & WASTE</span>
+    </div>
+    <div class="header-actions">
+      <a href="tel:07300538448" class="header-btn">📞 07300 538448</a>
+      <a href="#contact-form" class="header-btn">✉️ Get Quote</a>
+    </div>
+  </header>
+
+  <!-- Structured Data for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Denty's Small Removals & Waste",
+    "description": "Professional local removals, flat moves, garden clearance and waste disposal",
+    "telephone": "07300538448",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Scunthorpe"
+      },
+      {
+        "@type": "City",
+        "name": "Brigg"
+      },
+      {
+        "@type": "City",
+        "name": "Doncaster"
+      },
+      {
+        "@type": "City",
+        "name": "Gainsborough"
+      }
+    ],
+    "priceRange": "£45 - £500",
+    "knowsAbout": [
+      "House Removals",
+      "Flat Removals",
+      "Garden Clearance",
+      "Waste Removal",
+      "Furniture Moving",
+      "Commercial Removals"
+    ]
+  }
+  </script>
+
+  <div class="container">
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <h2>Local Removals You Can Trust</h2>
+      <p>Fast, reliable, and affordable service across the Midlands & North Lincolnshire</p>
+      <div class="hero-ctas">
+        <a href="tel:07300538448" class="hero-cta-btn hero-cta-primary">📞 Call Now</a>
+        <a href="#contact-form" class="hero-cta-btn hero-cta-secondary">Get Quote →</a>
+      </div>
+    </section>
+
+    <!-- Removals Section -->
+    <section>
+      <h2 class="section-title">Removals Services</h2>
+      <p class="section-subtitle">Local moves for homes, flats, shops and single items — fully insured and professional</p>
+      
+      <div class="grid-2">
+        <!-- Item 1 -->
+        <div class="service-card">
+          <div>
+            <div class="card-header">
+              <h3 class="card-title">Household Removals</h3>
+              <div class="card-price"><span>FROM</span> £250</div>
+            </div>
+            <p class="card-desc">Complete house moves with careful loading, professional packing, and safe transport. We handle everything from initial survey to final delivery, ensuring your belongings arrive safely.</p>
+          </div>
+          <a href="tel:07300538448" class="card-link">Request Quote →</a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="service-card">
+          <div>
+            <div class="card-header">
+              <h3 class="card-title">Flat Removals</h3>
+              <div class="card-price"><span>FROM</span> £175</div>
+            </div>
+            <p class="card-desc">Apartment and flat moves, including stairs, tight corridors, and challenging access. We're experienced in navigating compact spaces and tenanted properties with minimal disruption.</p>
+          </div>
+          <a href="tel:07300538448" class="card-link">Request Quote →</a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="service-card">
+          <div>
+            <div class="card-header">
+              <h3 class="card-title">Shop & Commercial</h3>
+              <div class="card-price"><span>FROM</span> £180</div>
+            </div>
+            <p class="card-desc">Retail and small business relocations, scheduled around your trading hours. We understand business continuity and work to minimise downtime.</p>
+          </div>
+          <a href="tel:07300538448" class="card-link">Request Quote →</a>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="service-card">
+          <div>
+            <div class="card-header">
+              <h3 class="card-title">Single Item Moves</h3>
+              <div class="card-price"><span>FROM</span> £45</div>
+            </div>
+            <p class="card-desc">Furniture, appliances, mattresses, and other large items delivered locally. Perfect for online purchases, upgrades, or relocating individual pieces.</p>
+          </div>
+          <a href="tel:07300538448" class="card-link">Request Quote →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Garden Section -->
+    <section>
+      <h2 class="section-title">Garden Clearance</h2>
+      <p class="section-subtitle">Waste taken away and outdoor spaces left tidy, ready to enjoy</p>
+      
+      <div class="grid-2">
+        <div class="service-card">
+          <div>
+            <div class="card-header">
+              <h3 class="card-title">Garden Maintenance & Clearance</h3>
+              <div class="card-price"><span>FROM</span> £45</div>
+            </div>
+            <p class="card-desc">Tidy-ups, overgrown garden clearance, green waste removal, and disposal of old furniture and rubbish. Leave your outdoor space clean, safe, and manageable. Perfect for end-of-tenancy or estate clearance.</p>
+          </div>
+          <a href="tel:07300538448" class="card-link">Request Quote →</a>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <div class="card-header">
+              <h3 class="card-title">Full Property Clearance</h3>
+              <div class="card-price"><span>FROM</span> £220</div>
+            </div>
+            <p class="card-desc">Complete house and garden clearance for bereavement, house sales, or end-of-tenancy. Sensitive, professional handling. Items sorted for recycling, donation, or responsible disposal.</p>
+          </div>
+          <a href="tel:07300538448" class="card-link">Request Quote →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Load Sizes Section -->
+    <section class="dark-section">
+      <h2 class="section-title">Load Sizes & Pricing</h2>
+      <p class="section-subtitle">Prefer to price by van load? These are typical collections, labour always included</p>
+
+      <div class="grid-4">
+        <div class="dark-card">
+          <div class="dark-card-price">FROM £45</div>
+          <h3 class="dark-card-title">SINGLE ITEM</h3>
+          <p class="dark-card-desc">Sofa, mattress, fridge, or similar</p>
+        </div>
+
+        <div class="dark-card">
+          <div class="dark-card-price">FROM £65</div>
+          <h3 class="dark-card-title">MINI LOAD</h3>
+          <p class="dark-card-desc">¼ van — bags and a few items</p>
+        </div>
+
+        <div class="dark-card">
+          <div class="dark-card-price">FROM £120</div>
+          <h3 class="dark-card-title">HALF VAN</h3>
+          <p class="dark-card-desc">Garage, garden, or one room</p>
+        </div>
+
+        <div class="dark-card">
+          <div class="dark-card-price">FROM £220</div>
+          <h3 class="dark-card-title">FULL VAN</h3>
+          <p class="dark-card-desc">Large clear-out or small house</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Coverage Area -->
+    <section class="coverage-section">
+      <h3>Service Coverage Area</h3>
+      <ul class="coverage-list">
+        <li>Scunthorpe</li>
+        <li>Brigg</li>
+        <li>Doncaster</li>
+        <li>Gainsborough</li>
+        <li>North Lincolnshire</li>
+        <li>South Yorkshire</li>
+        <li>Surrounding Areas</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section>
+      <h2 class="section-title">Customer Testimonials</h2>
+      <p class="section-subtitle">What our customers say about our service</p>
+
+      <div class="grid-2">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Denty's team was professional, punctual, and incredibly careful with all our belongings. They made the moving day stress-free. Highly recommended!"</p>
+          <p class="testimonial-author">Sarah Mitchell</p>
+          <p class="testimonial-role">House Move, Scunthorpe</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Great value for money. They cleared our garage in no time and left it spotless. No mess, no fuss. Will definitely use again."</p>
+          <p class="testimonial-author">David Thompson</p>
+          <p class="testimonial-role">Garage Clearance, Brigg</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Sensitive and respectful service during a difficult time. They handled everything perfectly. Very grateful."</p>
+          <p class="testimonial-author">Margaret Jones</p>
+          <p class="testimonial-role">Bereavement Clearance, Gainsborough</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Perfect for our office move. Scheduled around our hours, quick work, no disruption to our business. Top-notch service."</p>
+          <p class="testimonial-author">James Bradley</p>
+          <p class="testimonial-role">Commercial Relocation, Doncaster</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Work Section -->
+    <section>
+      <h2 class="section-title">Recent Project Examples</h2>
+      <p class="section-subtitle">Examples of recent jobs completed across the region</p>
+
+      <div class="grid-2">
+        <div class="service-card">
+          <div>
+            <span class="badge">📍 Scunthorpe</span>
+            <h3 class="card-title" style="margin-bottom: 0.5rem;">Full House Clearance</h3>
+            <p class="card-desc">Three-bedroom tenancy end. All contents removed, sorted for recycling, donation, or responsible disposal. Property left clean and ready for next occupants.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <span class="badge">📍 Brigg</span>
+            <h3 class="card-title" style="margin-bottom: 0.5rem;">Garage & Garden Clearance</h3>
+            <p class="card-desc">Cluttered garage and overgrown garden cleared of green waste, old furniture, tools, and general rubbish. Space restored and ready for use.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <span class="badge">📍 Doncaster</span>
+            <h3 class="card-title" style="margin-bottom: 0.5rem;">Office & Retail Move</h3>
+            <p class="card-desc">Surplus furniture, equipment, and mixed waste removed from commercial unit after hours. Scheduled to minimise business disruption.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <span class="badge">📍 Gainsborough</span>
+            <h3 class="card-title" style="margin-bottom: 0.5rem;">Bereavement Clearance</h3>
+            <p class="card-desc">Sensitive, full-property clearance carried out with care and respect. Worked closely with family throughout the process. Items handled responsibly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+      <div class="form-section">
+        <h2 class="section-title">Get a Free Quote</h2>
+        <p class="section-subtitle">Tell us about your removal or clearance need — we'll get back to you as soon as possible</p>
+
+        <div class="form-success" id="formSuccess">
+          ✓ Thank you! We've received your enquiry. We'll be in touch within 24 hours.
+        </div>
+
+        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required aria-label="Full Name">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required aria-label="Phone Number">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required aria-label="Email Address">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Required *</label>
+              <select id="service" name="service" required aria-label="Service Required">
+                <option value="">— Select a service —</option>
+                <option value="Household Removal">Household Removal</option>
+                <option value="Flat Removal">Flat Removal</option>
+                <option value="Commercial Move">Commercial Move</option>
+                <option value="Single Item Move">Single Item Move</option>
+                <option value="Garden Clearance">Garden Clearance</option>
+                <option value="Full Property Clearance">Full Property Clearance</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Collection Postcode / Area *</label>
+              <input type="text" id="location" name="location" placeholder="e.g., DN15, Scunthorpe" required aria-label="Collection Location">
+            </div>
+
+            <div class="form-group">
+              <label for="date">Preferred Date (if known)</label>
+              <input type="date" id="date" name="date" aria-label="Preferred Date">
+            </div>
+
+            <div class="form-group form-full-width">
+              <label for="message">Additional Details or Questions</label>
+              <textarea id="message" name="message" placeholder="Tell us more about your requirements..." aria-label="Additional Details"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="form-submit" aria-label="Submit Quote Request">Send Quote Request</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Denty's Small Removals & Waste | Phone: <a href="tel:07300538448">07300 538448</a></p>
+  </footer>
+
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const form = document.getElementById('contactForm');
+      const successMessage = document.getElementById('formSuccess');
+      
+      // Get form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Here you would normally send data to a server
+      // For now, we'll just show the success message
+      console.log('Form submitted:', data);
+      
+      // Show success message
+      successMessage.classList.add('show');
+      
+      // Reset form
+      form.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        successMessage.classList.remove('show');
+      }, 5000);
+    }
+  </script>
+
+</body>
+</html>
